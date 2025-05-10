@@ -1,0 +1,122 @@
+[
+    {
+        "id": "p1",
+        "name": "Lionel Messi",
+        "nationality": "Argentina",
+        "role": "Forward",
+        "price": 500000,
+        "image": "/your-squad-project-17/img/messi.jpg"
+    },
+    {
+        "id": "p2",
+        "name": "Cristiano Ronaldo",
+        "nationality": "Portugal",
+        "role": "Forward",
+        "price": 450000,
+        "image": "/your-squad-project-17/img/cr7.webp"
+    },
+    {
+        "id": "p3",
+        "name": "Kevin De Bruyne",
+        "nationality": "Belgium",
+        "role": "Midfielder",
+        "price": 400000,
+        "image": "/your-squad-project-17/img/KevinDeBruyne.webp"
+    },
+    {
+        "id": "p4",
+        "name": "Virgil van Dijk",
+        "nationality": "Netherlands",
+        "role": "Defender",
+        "price": 160000,
+        "image": "/your-squad-project-17/img/VirgilvanDijk.jpg"
+    },
+    {
+        "id": "p5",
+        "name": "Alisson Becker",
+        "nationality": "Brazil",
+        "role": "Goalkeeper",
+        "price": 130000,
+        "image": "/your-squad-project-17/img/AlissonBecker.jpg"
+    },
+    {
+        "id": "p6",
+        "name": "Luka Modrić",
+        "nationality": "Croatia",
+        "role": "Midfielder",
+        "price": 125000,
+        "image": "/your-squad-project-17/img/LukaModrić.jpg"
+    },
+    {
+        "id": "p7",
+        "name": "N'Golo Kanté",
+        "nationality": "France",
+        "role": "Midfielder",
+        "price": 115000,
+        "image": "/your-squad-project-17/img/N'GoloKanté.jpeg"
+    },
+    {
+        "id": "p8",
+        "name": "Jude Bellingham",
+        "nationality": "England",
+        "role": "Midfielder",
+        "price": 110000,
+        "image": "/your-squad-project-17/img/JudeBellingham.jpg"
+    },
+    {
+        "id": "p9",
+        "name": "Achraf Hakimi",
+        "nationality": "Morocco",
+        "role": "Defender",
+        "price": 105000,
+        "image": "/your-squad-project-17/img/AchrafHakimi.png"
+    },
+    {
+        "id": "p10",
+        "name": "Bukayo Saka",
+        "nationality": "England",
+        "role": "Forward",
+        "price": 100000,
+        "image": "/your-squad-project-17/img/BukayoSaka.jpg"
+    },
+    {
+        "id": "p11",
+        "name": "Pedri",
+        "nationality": "Spain",
+        "role": "Midfielder",
+        "price": 95000,
+        "image": "/your-squad-project-17/img/Pedri.jpg"
+    },
+    {
+        "id": "p12",
+        "name": "Matthijs de Ligt",
+        "nationality": "Netherlands",
+        "role": "Defender",
+        "price": 90000,
+        "image": "/your-squad-project-17/img/MatthijsdeLigt.jpg"
+    },
+    {
+        "id": "p13",
+        "name": "Gavi",
+        "nationality": "Spain",
+        "role": "Midfielder",
+        "price": 85000,
+        "image": "/your-squad-project-17/img/Gavi.jpg"
+    },
+    {
+        "id": "p14",
+        "name": "Diogo Costa",
+        "nationality": "Portugal",
+        "role": "Goalkeeper",
+        "price": 75000,
+        "image": "/your-squad-project-17/img/DiogoCosta.png"
+    },
+    {
+        "id": "p15",
+        "name": "Josko Gvardiol",
+        "nationality": "Croatia",
+        "role": "Defender",
+        "price": 70000,
+        "image": "/your-squad-project-17/img/JoskoGvardiol.jpg"
+    }
+]
