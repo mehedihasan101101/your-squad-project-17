@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 import coin from '../assets/dollar.png'
-export default function Nav() {
+export default function Nav({freeCoin}) {
     return (
         <>
             <div className="navbar lg:h-23 bg-base-100 ">
@@ -32,7 +32,7 @@ export default function Nav() {
                     <div className="px-3 py-2 rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
                         <div className=''>
                             <p className='font-bold flex items-center gap-2'>
-                                0 Coin
+                                {freeCoin} Coin
                                 <img className='w-[22px]' src={coin} alt="" />
                                 </p>
                         </div>
