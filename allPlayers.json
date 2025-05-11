@@ -5,7 +5,7 @@
         "nationality": "Argentina",
         "role": "Forward",
         "price": 500000,
-        "image": "/your-squad-project-17/img/messi.jpg"
+        "image": "https://i.imgur.com/c5o5Pzj.jpeg"
     },
     {
         "id": "p2",
@@ -13,7 +13,7 @@
         "nationality": "Portugal",
         "role": "Forward",
         "price": 450000,
-        "image": "/your-squad-project-17/img/cr7.webp"
+        "image": "https://i.imgur.com/CMi78WM.png"
     },
     {
         "id": "p3",
@@ -29,7 +29,7 @@
         "nationality": "Netherlands",
         "role": "Defender",
         "price": 160000,
-        "image": "/your-squad-project-17/img/VirgilvanDijk.jpg"
+        "image": "https://i.imgur.com/Eh2RAxk.jpeg"
     },
     {
         "id": "p5",
@@ -37,7 +37,7 @@
         "nationality": "Brazil",
         "role": "Goalkeeper",
         "price": 130000,
-        "image": "/your-squad-project-17/img/AlissonBecker.jpg"
+        "image": "https://i.imgur.com/azJO99N.jpeg"
     },
     {
         "id": "p6",
@@ -45,7 +45,7 @@
         "nationality": "Croatia",
         "role": "Midfielder",
         "price": 125000,
-        "image": "/your-squad-project-17/img/LukaModrić.jpg"
+        "image": "https://i.imgur.com/JxBojZC.jpeg"
     },
     {
         "id": "p7",
@@ -53,7 +53,7 @@
         "nationality": "France",
         "role": "Midfielder",
         "price": 115000,
-        "image": "/your-squad-project-17/img/N'GoloKanté.jpeg"
+        "image": "https://i.imgur.com/3tVXeDj.jpeg"
     },
     {
         "id": "p8",
@@ -61,7 +61,7 @@
         "nationality": "England",
         "role": "Midfielder",
         "price": 110000,
-        "image": "/your-squad-project-17/img/JudeBellingham.jpg"
+        "image": "https://i.imgur.com/kcxT1eN.jpeg"
     },
     {
         "id": "p9",
@@ -69,7 +69,7 @@
         "nationality": "Morocco",
         "role": "Defender",
         "price": 105000,
-        "image": "/your-squad-project-17/img/AchrafHakimi.png"
+        "image": "https://i.imgur.com/SbXs01F.png"
     },
     {
         "id": "p10",
@@ -77,7 +77,7 @@
         "nationality": "England",
         "role": "Forward",
         "price": 100000,
-        "image": "https://github.com/mehedihasan101101/your-squad-project-17/blob/47e35aaf65377507467e639813685a58381a32f8/public/img/AchrafHakimi.png"
+        "image": "https://i.imgur.com/MHXOIH2.jpeg"
     },
     {
         "id": "p11",
@@ -85,7 +85,7 @@
         "nationality": "Spain",
         "role": "Midfielder",
         "price": 95000,
-        "image": "/your-squad-project-17/img/Pedri.jpg"
+        "image": "https://i.imgur.com/vhwfCzp.jpeg"
     },
     {
         "id": "p12",
@@ -93,7 +93,7 @@
         "nationality": "Netherlands",
         "role": "Defender",
         "price": 90000,
-        "image": "/your-squad-project-17/img/MatthijsdeLigt.jpg"
+        "image": "https://i.imgur.com/DGYefrJ.jpeg"
     },
     {
         "id": "p13",
@@ -101,7 +101,7 @@
         "nationality": "Spain",
         "role": "Midfielder",
         "price": 85000,
-        "image": "/your-squad-project-17/img/Gavi.jpg"
+        "image": "https://i.imgur.com/DHJmPIZ.jpeg"
     },
     {
         "id": "p14",
@@ -109,7 +109,7 @@
         "nationality": "Portugal",
         "role": "Goalkeeper",
         "price": 75000,
-        "image": "/your-squad-project-17/img/DiogoCosta.png"
+        "image": "https://i.imgur.com/74J9Vwm.jpeg"
     },
     {
         "id": "p15",
@@ -117,6 +117,6 @@
         "nationality": "Croatia",
         "role": "Defender",
         "price": 70000,
-        "image": "/your-squad-project-17/img/JoskoGvardiol.jpg"
+        "image": "https://i.imgur.com/Wl9vL56.jpeg"
     }
 ]
