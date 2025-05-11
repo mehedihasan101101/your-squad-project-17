@@ -27,11 +27,14 @@ function App() {
 
   return (
     <>
-      <Nav freeCoin={freeCoin}></Nav>
+    <nav>
+  <Nav freeCoin={freeCoin}></Nav>
+    </nav>
+   
       <header className='container mx-auto p-2 lg:mt-6'>
         <HeroSection addCredit={addCredit} ></HeroSection>
       </header>
-      <main>
+      <main className='container mx-auto p-2 lg:mt-6' >
         <AllPlayerContainer></AllPlayerContainer>
       </main>
 
