@@ -7,7 +7,7 @@ export default function AllPlayerContainer() {
 
     const [players, setPlayers] = useState([])
     useEffect(() => {
-        fetch('/your-squad-project-17/allPlayers.json')
+        fetch('/your-squad-project-17/allplayers.json')
             .then(res => res.json())
             .then(data => setPlayers(data))
 
