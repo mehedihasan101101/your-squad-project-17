@@ -12,7 +12,7 @@ export default function AllPlayerContainer() {
             .then(data => setPlayers(data))
 
     }, [])
-    console.log(players)
+   
     const [isClicked, setIsClicked] = useState(true);
     function btnAvalAble() {
 
@@ -22,6 +22,10 @@ export default function AllPlayerContainer() {
 
         setIsClicked(false)
     }
+ 
+    
+    const  [selectedPlayer,setSelectedPlayer] = useState([]);
+    console.log(selectedPlayer)
     return (
         <>
             <div className="flex justify-between items-center">
@@ -34,7 +38,7 @@ export default function AllPlayerContainer() {
                 </div>
             </div>
             <div className={` mt-6 grid lg:grid-cols-4 md:grid-cols-2 gap-2 ${isClicked == true ? "" : "hidden"}`}>
-                {players.map(player=><PlayerCard player={player} ></PlayerCard>)}
+                {players.map(player => <PlayerCard player={player} selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer} ></PlayerCard>)}
             </div>
             <div className={isClicked == false ? "" : "hidden"} >
                 <SelectedCard></SelectedCard>
