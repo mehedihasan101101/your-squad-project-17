@@ -1,13 +1,14 @@
 import { FaUser } from "react-icons/fa";
 import { IoFlagSharp } from "react-icons/io5";
 import { savePlayerToLs, verifySelectedPlayerList } from "../utilities/selected-player-ls";
-export default function PlayerCard({ player ,setSelectedPlayer,selectedPlayer }) {
+export default function PlayerCard({ player ,setSelectedPlayer }) {
 
     function addToSelectedList(){
         savePlayerToLs(player.id)
         let selectedPlayerList = verifySelectedPlayerList();
         setSelectedPlayer(selectedPlayerList)
     }
+
     return (
         <>
             <div className=" space-y-2 rounded-xl p-5 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
