@@ -3,19 +3,36 @@ import { IoFlagSharp } from "react-icons/io5";
 import { savePlayerToLs, verifySelectedPlayerList } from "../utilities/selected-player-ls";
 import { ToastContainer, toast } from 'react-toastify';
 import React from "react";
-export default function PlayerCard({ player, setSelectedPlayerId, freeCoin, selectedPlayerId }) {
+import { setCoinLs, verifyCoinLs } from "../utilities/localStorage";
+export default function PlayerCard({ player, setSelectedPlayerId, freeCoin, selectedPlayerId, setFreeCoin }) {
 
     function addToSelectedList() {
         if (selectedPlayerId.includes(player.id)) {
             toast.warning(`${player.name} is already added to your team!`, { position: "top-center" })
         }
         else if (freeCoin >= player.price) {
-            toast.success(`Congratulations! ${player.name} has been  in your team!`, {
-                position: "top-center",
-            })
-            savePlayerToLs(player.id)
-            let selectedPlayerList = verifySelectedPlayerList();
-            setSelectedPlayerId(selectedPlayerList);
+            if (selectedPlayerId.length < 11) {
+                toast.success(`Congratulations! ${player.name} has been  in your team!`, {
+                    position: "top-center",
+                })
+                savePlayerToLs(player.id)
+                let selectedPlayerList = verifySelectedPlayerList();
+                setSelectedPlayerId(selectedPlayerList);
+
+
+                let coin = freeCoin - player.price;
+                setCoinLs(coin)
+                const finalCoin = verifyCoinLs();
+                setFreeCoin(finalCoin)
+            }
+            else {
+                toast.warning("Only 11 players allowed per team!",{
+                    position:"top-center"
+                })
+            }
+
+
+
         }
         else {
             toast.warning("Action failed: Insufficient coins", { position: "top-center" })

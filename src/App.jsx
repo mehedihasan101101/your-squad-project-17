@@ -6,6 +6,7 @@ import { setCoinLs, verifyCoinLs } from './utilities/localStorage';
 import AllPlayerContainer from './components/allPlayerContainer';
 import { ToastContainer, toast } from 'react-toastify';
 
+
 function App() {
   const [freeCoin, setFreeCoin] = useState(0);
   useEffect(() => {
@@ -14,7 +15,7 @@ function App() {
   }, [])
 
   function addCredit() {
-    const coin = 1500000;
+    const coin = 15500000;
 
     if (freeCoin == 0) {
       toast.success('Congratulations! You Got Free Coins', {
@@ -35,15 +36,16 @@ function App() {
 
   return (
     <>
+
       <nav>
         <Nav freeCoin={freeCoin}></Nav>
       </nav>
-
+ 
       <header className='container mx-auto p-2 lg:mt-6'>
         <HeroSection addCredit={addCredit} ></HeroSection>
       </header>
       <main className='container mx-auto p-2 lg:mt-6' >
-        <AllPlayerContainer freeCoin={freeCoin}></AllPlayerContainer>
+        <AllPlayerContainer freeCoin={freeCoin} setFreeCoin={setFreeCoin}></AllPlayerContainer>
       </main>
       <ToastContainer></ToastContainer>
     </>

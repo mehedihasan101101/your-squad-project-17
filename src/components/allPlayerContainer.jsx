@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import PlayerCard from "./playerCard"
 import SelectedPlayerContainer from "./SelectedPlayerContainer"
+import { verifySelectedPlayerList } from "../utilities/selected-player-ls"
 
-export default function AllPlayerContainer({freeCoin}) {
+export default function AllPlayerContainer({ freeCoin,setFreeCoin }) {
 
 
     const [players, setPlayers] = useState([])
@@ -10,9 +11,13 @@ export default function AllPlayerContainer({freeCoin}) {
         fetch('/your-squad-project-17/players.json')
             .then(res => res.json())
             .then(data => setPlayers(data))
-
     }, [])
-   
+
+    useEffect(() => {
+        let selectedPlayerList = verifySelectedPlayerList();
+        setSelectedPlayerId(selectedPlayerList)
+    }, [])
+    
     const [isClicked, setIsClicked] = useState(true);
     function btnAvalAble() {
 
@@ -23,8 +28,8 @@ export default function AllPlayerContainer({freeCoin}) {
         setIsClicked(false)
     }
 
-    const  [selectedPlayerId,setSelectedPlayerId] = useState([]);
-    
+    const [selectedPlayerId, setSelectedPlayerId] = useState([]);
+
     return (
         <>
             <div className="flex justify-between items-center">
@@ -33,14 +38,14 @@ export default function AllPlayerContainer({freeCoin}) {
                     <button onClick={btnAvalAble} className={`rounded-tl-lg rounded-bl-lg  py-2 px-5 cursor-pointer
                     ${isClicked == true ? "bg-[#E7FE29]" : ""}`}  >Available</button>
                     <button onClick={btnSelected} className={`rounded-tr-lg rounded-br-lg  py-2 px-5 cursor-pointer
-                        ${isClicked == false ? "bg-[#E7FE29]" : ""}`} >Selected</button>
+                        ${isClicked == false ? "bg-[#E7FE29]" : ""}`} >Selected ({selectedPlayerId.length})</button>
                 </div>
             </div>
             <div className={` mt-6 grid lg:grid-cols-4 md:grid-cols-2 gap-2 ${isClicked == true ? "" : "hidden"}`}>
-                {players.map(player => <PlayerCard selectedPlayerId= {selectedPlayerId} freeCoin={freeCoin} player={player} setSelectedPlayerId={setSelectedPlayerId} ></PlayerCard>)}
+                {players.map(player => <PlayerCard selectedPlayerId={selectedPlayerId} freeCoin={freeCoin} setFreeCoin={setFreeCoin} player={player} setSelectedPlayerId={setSelectedPlayerId} ></PlayerCard>)}
             </div>
             <div className={isClicked == false ? "" : "hidden"} >
-                <SelectedPlayerContainer selectedPlayerId ={selectedPlayerId}  players ={players}></SelectedPlayerContainer>
+                <SelectedPlayerContainer selectedPlayerId={selectedPlayerId} players={players}></SelectedPlayerContainer>
             </div>
 
 
