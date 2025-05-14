@@ -17,13 +17,17 @@ function App() {
     const coin = 1500000;
 
     if (freeCoin == 0) {
-      toast.info('Coin Added');
+      toast.success('Congratulations! You Got Free Coins', {
+        position: 'top-center'
+      });
       setCoinLs(coin)
       const finalCoin = verifyCoinLs();
       setFreeCoin(finalCoin)
     }
     else {
-      toast.warning('Coin Already Added');
+      toast.warning('Coin Already Added', {
+        position: 'top-center'
+      });
     }
 
 
@@ -39,7 +43,7 @@ function App() {
         <HeroSection addCredit={addCredit} ></HeroSection>
       </header>
       <main className='container mx-auto p-2 lg:mt-6' >
-        <AllPlayerContainer></AllPlayerContainer>
+        <AllPlayerContainer freeCoin={freeCoin}></AllPlayerContainer>
       </main>
       <ToastContainer></ToastContainer>
     </>

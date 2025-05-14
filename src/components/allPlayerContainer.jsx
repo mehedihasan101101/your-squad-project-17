@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import PlayerCard from "./playerCard"
 import SelectedCard from "./selectredCard"
 
-export default function AllPlayerContainer() {
+export default function AllPlayerContainer({freeCoin}) {
 
 
     const [players, setPlayers] = useState([])
@@ -37,7 +37,7 @@ export default function AllPlayerContainer() {
                 </div>
             </div>
             <div className={` mt-6 grid lg:grid-cols-4 md:grid-cols-2 gap-2 ${isClicked == true ? "" : "hidden"}`}>
-                {players.map(player => <PlayerCard player={player} setSelectedPlayer={setSelectedPlayer} ></PlayerCard>)}
+                {players.map(player => <PlayerCard selectedPlayer= {selectedPlayer} freeCoin={freeCoin} player={player} setSelectedPlayer={setSelectedPlayer} ></PlayerCard>)}
             </div>
             <div className={isClicked == false ? "" : "hidden"} >
                 <SelectedCard></SelectedCard>
