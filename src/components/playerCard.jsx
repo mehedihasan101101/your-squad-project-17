@@ -3,10 +3,10 @@ import { IoFlagSharp } from "react-icons/io5";
 import { savePlayerToLs, verifySelectedPlayerList } from "../utilities/selected-player-ls";
 import { ToastContainer, toast } from 'react-toastify';
 import React from "react";
-export default function PlayerCard({ player, setSelectedPlayer, freeCoin, selectedPlayer }) {
+export default function PlayerCard({ player, setSelectedPlayerId, freeCoin, selectedPlayerId }) {
 
     function addToSelectedList() {
-        if (selectedPlayer.includes(player.id)) {
+        if (selectedPlayerId.includes(player.id)) {
             toast.warning(`${player.name} is already added to your team!`, { position: "top-center" })
         }
         else if (freeCoin >= player.price) {
@@ -15,7 +15,7 @@ export default function PlayerCard({ player, setSelectedPlayer, freeCoin, select
             })
             savePlayerToLs(player.id)
             let selectedPlayerList = verifySelectedPlayerList();
-            setSelectedPlayer(selectedPlayerList);
+            setSelectedPlayerId(selectedPlayerList);
         }
         else {
             toast.warning("Action failed: Insufficient coins", { position: "top-center" })
