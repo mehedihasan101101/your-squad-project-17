@@ -40,7 +40,7 @@ function App() {
       <nav>
         <Nav freeCoin={freeCoin}></Nav>
       </nav>
- 
+
       <header className='container mx-auto p-2 lg:mt-6'>
         <HeroSection addCredit={addCredit} ></HeroSection>
       </header>

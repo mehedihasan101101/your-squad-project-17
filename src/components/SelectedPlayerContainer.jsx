@@ -2,26 +2,27 @@
 import { useEffect, useState } from "react";
 import SelectedPlyerCard from "./selectedPlyerCard";
 
-export default function SelectedPlayerContainer({ selectedPlayerId, players }) {
-    const [final, setFinal] = useState([])
+export default function SelectedPlayerContainer({ selectedPlayerId, players, btnAvalAble }) {
+    const [finalPlist, setFinalPlist] = useState([])
     useEffect(() => {
-        let finalS = []
+        let finaSelectedPlayerList = []
 
         selectedPlayerId.map(id => {
-            let hisamari = players.find(each => each.id == id);
-            if (hisamari) {
-                finalS.push(hisamari);
+            let selectedPInfo = players.find(each => each.id == id);
+            if (selectedPInfo) {
+                finaSelectedPlayerList.push(selectedPInfo);
             }
 
         })
-        setFinal(finalS)
+        setFinalPlist(finaSelectedPlayerList)
 
 
     }, [players, selectedPlayerId])
-  
+
     return (
         <>
-            {final.map(f => <SelectedPlyerCard f={f} ></SelectedPlyerCard>)}
+            {finalPlist.map(SelectedPInfo => <SelectedPlyerCard SelectedPInfo={SelectedPInfo} ></SelectedPlyerCard>)}
+            <button onClick={btnAvalAble} className=' mt-5 cursor-pointer py-4 px-2 border rounded-xl border-[#000000] ' ><a className='  rounded bg-[#E7FE29] py-3 px-5 font-bold '>Add More Player</a></button>
         </>
     )
 }
