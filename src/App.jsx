@@ -15,7 +15,7 @@ function App() {
   }, [])
 
   function addCredit() {
-    const coin = 15500000;
+    const coin = 2000000;
 
     if (freeCoin == 0) {
       toast.success('Congratulations! You Got Free Coins', {
@@ -26,7 +26,7 @@ function App() {
       setFreeCoin(finalCoin)
     }
     else {
-      toast.warning('Coin Already Added', {
+      toast.warning('Reset to Add Free Coin Again', {
         position: 'top-center'
       });
     }

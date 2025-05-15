@@ -42,10 +42,10 @@ export default function AllPlayerContainer({ freeCoin,setFreeCoin }) {
                 </div>
             </div>
             <div className={` mt-6 grid lg:grid-cols-4 md:grid-cols-2 gap-2 ${isClicked == true ? "" : "hidden"}`}>
-                {players.map(player => <PlayerCard selectedPlayerId={selectedPlayerId} freeCoin={freeCoin} setFreeCoin={setFreeCoin} player={player} setSelectedPlayerId={setSelectedPlayerId} ></PlayerCard>)}
+                {players.map(player => <PlayerCard selectedPlayerId={selectedPlayerId}  freeCoin={freeCoin} setFreeCoin={setFreeCoin} player={player} setSelectedPlayerId={setSelectedPlayerId} ></PlayerCard>)}
             </div>
             <div className={isClicked == false ? "" : "hidden"} >
-                <SelectedPlayerContainer  btnAvalAble={btnAvalAble} selectedPlayerId={selectedPlayerId} players={players}></SelectedPlayerContainer>
+                <SelectedPlayerContainer setFreeCoin={setFreeCoin}  freeCoin={freeCoin} btnAvalAble={btnAvalAble} selectedPlayerId={selectedPlayerId} setSelectedPlayerId={setSelectedPlayerId} players={players}></SelectedPlayerContainer>
             </div>
 
 

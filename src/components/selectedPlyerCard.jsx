@@ -1,6 +1,11 @@
 import { MdDeleteForever } from "react-icons/md";
 
-export default function SelectedPlyerCard({ SelectedPInfo }) {
+export default function SelectedPlyerCard({ SelectedPInfo, selectedPlayerId, setSelectedPlayerId }) {
+    function deletePlayer() {
+        let filteredPIdList = selectedPlayerId.filter(eachPid => eachPid !== SelectedPInfo.id)
+        setSelectedPlayerId(filteredPIdList)
+        localStorage.setItem("savedPlayer", JSON.stringify(filteredPIdList))
+    }
     const { name, image, role } = SelectedPInfo;
     return (
         <>
@@ -12,7 +17,7 @@ export default function SelectedPlyerCard({ SelectedPInfo }) {
                         <h4>{role}</h4>
                     </div>
                 </div>
-                <MdDeleteForever className=" text-red-500 text-3xl cursor-pointer"></MdDeleteForever>
+                <MdDeleteForever onClick={deletePlayer} className=" text-red-500 text-3xl cursor-pointer"></MdDeleteForever>
             </div>
 
         </>
