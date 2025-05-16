@@ -5,6 +5,7 @@ import Nav from './components/nav'
 import { setCoinLs, verifyCoinLs } from './utilities/localStorage';
 import AllPlayerContainer from './components/allPlayerContainer';
 import { ToastContainer, toast } from 'react-toastify';
+import SubToNewsLetterSec from './components/subToNewsLetterSec';
 
 
 function App() {
@@ -46,8 +47,11 @@ function App() {
       </header>
       <main className='container mx-auto p-2 lg:mt-6' >
         <AllPlayerContainer freeCoin={freeCoin} setFreeCoin={setFreeCoin}></AllPlayerContainer>
+        <SubToNewsLetterSec></SubToNewsLetterSec>
+        <ToastContainer></ToastContainer>
       </main>
-      <ToastContainer></ToastContainer>
+
+
     </>
   )
 }
