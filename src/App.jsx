@@ -37,7 +37,7 @@ function App() {
   return (
     <>
 
-      <nav>
+      <nav className='sticky top-0 z-50 '>
         <Nav freeCoin={freeCoin}></Nav>
       </nav>
 

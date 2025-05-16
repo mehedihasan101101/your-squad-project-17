@@ -1,9 +1,19 @@
 import logo from '../assets/logo.png'
 import coin from '../assets/dollar.png'
-export default function Nav({freeCoin}) {
+import { useEffect, useState } from 'react'
+export default function Nav({ freeCoin }) {
+    const [hasShadow, setHasShadow] = useState(false);
+    useEffect(() => {
+        function controlNav() {
+            setHasShadow(window.scrollY > 10)
+        }
+        window.addEventListener('scroll', controlNav)
+
+        // return () => window.removeEventListener('scroll', controlNav);
+    }, [])
     return (
         <>
-            <div className="navbar lg:h-23 bg-base-100 ">
+            <div className={`navbar lg:h-23 bg-base-100 ${hasShadow? "shadow":""}`}>
                 <div className="flex container mx-auto items-center">
                     <div className="flex-1 flex items-center">
                         <div className="dropdown">
@@ -34,7 +44,7 @@ export default function Nav({freeCoin}) {
                             <p className='font-bold flex items-center gap-2'>
                                 {freeCoin} Coin
                                 <img className='w-[22px]' src={coin} alt="" />
-                                </p>
+                            </p>
                         </div>
                     </div>
                 </div>
