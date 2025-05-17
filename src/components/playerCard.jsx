@@ -12,9 +12,6 @@ export default function PlayerCard({ player, setSelectedPlayerId, freeCoin, sele
         }
         else if (freeCoin >= player.price) {
             if (selectedPlayerId.length < 11) {
-                toast.success(`Congratulations! ${player.name} has been  in your team!`, {
-                    position: "top-center",
-                })
                 savePlayerToLs(player.id)
                 let selectedPlayerList = verifySelectedPlayerList();
                 setSelectedPlayerId(selectedPlayerList);

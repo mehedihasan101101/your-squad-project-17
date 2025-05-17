@@ -6,6 +6,7 @@ import { setCoinLs, verifyCoinLs } from './utilities/localStorage';
 import AllPlayerContainer from './components/allPlayerContainer';
 import { ToastContainer, toast } from 'react-toastify';
 import SubToNewsLetterSec from './components/subToNewsLetterSec';
+import Footer from './components/footer';
 
 
 function App() {
@@ -50,6 +51,11 @@ function App() {
         <SubToNewsLetterSec></SubToNewsLetterSec>
         <ToastContainer></ToastContainer>
       </main>
+      <footer className='bg-[#06091A]'>
+        <Footer></Footer>
+        <div className='border-t md:py-5 py-4'><h5 className='text-white/50 text-center'>@2024 Your Company All Rights Reserved.</h5></div>
+      </footer>
+
 
 
     </>

@@ -23,19 +23,19 @@ export default function Nav({ freeCoin }) {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                <li><a>Home</a></li>
-                                <li><a>Fixture</a></li>
-                                <li><a>Team</a></li>
+                                <li><a href=''>Home</a></li>
+                                <li><a href='#allPlayers'>Players</a></li>
+                                <li><a href='#newsLetter'>News</a></li>
                                 <li><a>Schedules</a></li>
                             </ul>
                         </div>
-                        <a className="text-xl"><img className='lg:w-[110.16px] w-[75px]' src={logo} alt="" /></a>
+                        <a className="text-xl" href=''><img className='lg:w-[110.16px] w-[75px]' src={logo}  alt="" /></a>
                     </div>
                     <div className=" hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 text-[#5a5a5a] text-[16px] gap-8">
-                            <li><a>Home</a></li>
-                            <li><a>Fixture</a></li>
-                            <li><a>Team</a></li>
+                            <li><a href=''>Home</a></li>
+                            <li><a href='#allPlayers'>Players</a></li>
+                            <li><a href='#newsLetter'>News</a></li>
                             <li><a>Schedules</a></li>
                         </ul>
                     </div>
