@@ -9,7 +9,7 @@ export default function Nav({ freeCoin }) {
         }
         window.addEventListener('scroll', controlNav)
 
-        // return () => window.removeEventListener('scroll', controlNav);
+        return () => window.removeEventListener('scroll', controlNav);
     }, [])
     return (
         <>
